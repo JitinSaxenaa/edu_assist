@@ -21,20 +21,14 @@ const Attendance: React.FC = () => {
 
       try {
         const devices = await navigator.mediaDevices.enumerateDevices();
-        const videoInput = devices.find(
-          (device) => device.kind === "videoinput"
-        );
+        const videoInput = devices.find((device) => device.kind === "videoinput");
 
         if (!videoInput) {
-          alert(
-            "❌ No camera device found. Please connect a camera or use a device with a camera."
-          );
+          alert("❌ No camera device found. Please connect a camera or use a device with a camera.");
           return;
         }
 
-        const stream = await navigator.mediaDevices.getUserMedia({
-          video: { facingMode: "environment" },
-        });
+        const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
         if (videoRef.current) {
           videoRef.current.srcObject = stream;
 
@@ -58,9 +52,7 @@ const Attendance: React.FC = () => {
         }
       } catch (err) {
         console.error("Camera initialization error:", err);
-        alert(
-          "❌ Camera access denied or unavailable. Please check permissions."
-        );
+        alert("❌ Camera access denied or unavailable. Please check permissions.");
       }
     };
 
@@ -73,9 +65,7 @@ const Attendance: React.FC = () => {
       }
 
       if (videoRef.current?.srcObject) {
-        (videoRef.current.srcObject as MediaStream)
-          .getTracks()
-          .forEach((track) => track.stop());
+        (videoRef.current.srcObject as MediaStream).getTracks().forEach((track) => track.stop());
         videoRef.current.srcObject = null;
       }
     };
@@ -83,9 +73,7 @@ const Attendance: React.FC = () => {
 
   const startScanning = async () => {
     if (!scanner) {
-      alert(
-        "⚠️ Scanner not initialized. Please wait for the camera to load and try again."
-      );
+      alert("⚠️ Scanner not initialized. Please wait for the camera to load and try again.");
       return;
     }
 
@@ -95,9 +83,7 @@ const Attendance: React.FC = () => {
       setScanResult("");
     } catch (err) {
       console.error("Scanner start error:", err);
-      alert(
-        "❌ Unable to start the scanner. Make sure no other app is using the camera."
-      );
+      alert("❌ Unable to start the scanner. Make sure no other app is using the camera.");
     }
   };
 
@@ -106,9 +92,7 @@ const Attendance: React.FC = () => {
     setScanning(false);
 
     if (videoRef.current?.srcObject) {
-      (videoRef.current.srcObject as MediaStream)
-        .getTracks()
-        .forEach((track) => track.stop());
+      (videoRef.current.srcObject as MediaStream).getTracks().forEach((track) => track.stop());
       videoRef.current.srcObject = null;
     }
   };
@@ -119,22 +103,20 @@ const Attendance: React.FC = () => {
       <div className="absolute top-0 -left-10 w-40 h-40 bg-blue-100 rounded-full -z-10 blur-3xl"></div>
       <div className="absolute bottom-0 -right-10 w-48 h-48 bg-blue-200 rounded-full -z-10 blur-2xl"></div>
 
-      <h2 className="text-2xl font-bold text-center text-blue-700">
-        📷 QR Code Scanning
-      </h2>
+      <h2 className="text-2xl font-bold text-center text-blue-700">📷 QR Code Scanning</h2>
 
       {!scanning ? (
         <div className="flex flex-col items-center space-y-4">
-          <Image
-            src={QRImage}
-            alt="QR Code Illustration"
-            width={260}
-            height={260}
+          <Image 
+            src={QRImage} 
+            alt="QR Code Illustration" 
+            width={260} 
+            height={260} 
             className="rounded-lg shadow-lg"
             priority
           />
-          <Button
-            onClick={startScanning}
+          <Button 
+            onClick={startScanning} 
             className="w-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center"
           >
             <Camera className="mr-2" /> Start Scanning
@@ -151,9 +133,9 @@ const Attendance: React.FC = () => {
               autoPlay
             ></video>
           </div>
-          <Button
-            onClick={stopScanning}
-            variant="destructive"
+          <Button 
+            onClick={stopScanning} 
+            variant="destructive" 
             className="w-full flex items-center justify-center"
           >
             <StopCircle className="mr-2" /> Stop Scanning
