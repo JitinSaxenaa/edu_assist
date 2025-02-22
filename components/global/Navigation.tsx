@@ -61,7 +61,7 @@ const Navigation = () => {
 };
 
 const dropdownItems = [
-  { label: 'Attendance Management', href: '#attendance' },
+  { label: 'Attendance Management', href: '/features' },
   { label: 'AI-Powered Reports', href: '#reports'},
   { label: 'Smart Scheduling', href: '#scheduling' },
   { label: 'Parent-Teacher Communication', href: '#communication' },
