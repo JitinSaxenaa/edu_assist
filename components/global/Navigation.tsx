@@ -2,6 +2,8 @@
 import { ChevronUp, ChevronDown } from 'lucide-react';
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import Logo from "../../images/logo.png"
 const Navigation = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -22,6 +24,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
+            <Image src={Logo} height={80} className='p-1.5' alt="logo" />
             <span className="text-primary text-2xl font-bold">EduAssist</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-lg font-medium text-gray-800">
