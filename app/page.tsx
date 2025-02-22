@@ -1,3 +1,5 @@
+import Hero from '@/components/global/Hero';
+import Navigation from '@/components/global/Navigation';
 import { Button } from '@/components/ui/button';
 import { GraduationCap, BarChart3, Calendar, MessageSquare, UserCog, HelpCircle, CheckCircle2 } from 'lucide-react';
 
@@ -5,54 +7,10 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Navigation */}
-      <nav className="fixed w-full bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 z-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <div className="flex items-center">
-              <span className="text-primary text-2xl font-bold">EduAssist</span>
-            </div>
-            <div className="hidden md:flex items-center gap-8">
-              <a href="#features" className="nav-link">Features</a>
-              <a href="#dashboard" className="nav-link">Dashboard</a>
-              <a href="#support" className="nav-link">Help & Support</a>
-            </div>
-            <div className="flex items-center gap-4">
-              <button className="btn-ghost">Login</button>
-              <button className="btn-primary">Sign Up</button>
-            </div>
-          </div>
-        </div>
-      </nav>
+     <Navigation/>
 
       {/* Hero Section */}
-      <section className="hero-gradient relative pt-32 pb-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="flex-1 text-center lg:text-left animate-fade-up">
-              <h1 className="text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-                Empower Your Educational Experience with EduAssist
-              </h1>
-              <p className="text-xl text-white/90 mb-10 max-w-[600px]">
-                Our platform offers a comprehensive solution for teachers, administrators, and parents, ensuring seamless management of educational processes.
-              </p>
-              <button className="btn-primary text-lg px-8 py-3">
-                Get Started with EduAssist
-              </button>
-            </div>
-            <div className="flex-1 animate-fade-up animate-delay-200">
-              <img 
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80"
-                alt="Educational Technology"
-                className="rounded-2xl shadow-2xl"
-                width={600}
-                height={400}
-              />
-            </div>
-          </div>
-        </div>
-        <div className="wave-shape"></div>
-      </section>
-
+      <Hero />
       {/* Features Section */}
       <section className="py-24 bg-gray-50/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
