@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "install":"npm install --legacy-per-deps ",
+    "install": "npm install --legacy-per-deps ",
     "dev": "next dev",
     "build": " next build",
     "start": "next start",
