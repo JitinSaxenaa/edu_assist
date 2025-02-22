@@ -1,5 +1,5 @@
 import React from 'react'
-import AttendancePage from '../pages/attendance'
+import AttendancePage from '../../components/attendance'
 
 const page = () => {
   return (
