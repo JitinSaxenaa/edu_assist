@@ -25,7 +25,7 @@ const Features = () => {
                   />
                 }
                 title="Smart Scheduling"
-                description="Smart Scheduling in EduAssist leverages AI to automate lesson planning and timetable creation, saving educators over 5 hours weekly. It dynamically optimizes schedules based on teacher availability, student needs, and resource constraints, ensuring efficient learning and minimal conflicts."
+                description="Smart Scheduling in EduAssist leverages AI to automate lesson planning and timetable creation, saving educators over 5 hours weekly. It dynamically optimizes schedules based on teacher availability, student needs.          "
               />
             </div>
             <div className="animate-fade-up animate-delay-100">
