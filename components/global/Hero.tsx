@@ -1,4 +1,6 @@
+import Image from 'next/image'
 import React from 'react'
+import Hero_image from "../../images/hero_page.webp"
 
 const Hero = () => {
   return (
@@ -17,13 +19,7 @@ const Hero = () => {
               </button>
             </div>
             <div className="flex-1 animate-fade-up animate-delay-200">
-              <img 
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80"
-                alt="Educational Technology"
-                className="rounded-2xl shadow-2xl"
-                width={600}
-                height={400}
-              />
+              <Image src={Hero_image} alt="Hero Image" width={600} height={400} />
             </div>
           </div>
         </div>
