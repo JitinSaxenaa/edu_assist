@@ -19,8 +19,8 @@ const Features = () => {
                   <Image 
                     src={smart} 
                     alt="Smart Scheduling" 
-                    width={60} 
-                    height={60} 
+                    width={400} 
+                    height={300} 
                     className="rounded-lg" 
                   />
                 }
@@ -34,8 +34,8 @@ const Features = () => {
                 <Image 
                   src={AI} 
                   alt="Smart Scheduling" 
-                  width={60} 
-                  height={60} 
+                  width={400} 
+                  height={300} 
                   className="rounded-lg" 
                 />
               }
@@ -49,8 +49,8 @@ const Features = () => {
                     <Image 
                       src={attendance} 
                       alt="Smart Scheduling" 
-                      width={60} 
-                      height={60} 
+                      width={400} 
+                      height={300} 
                       className="rounded-lg" 
                     />
                   }
