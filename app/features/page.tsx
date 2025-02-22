@@ -1,12 +1,12 @@
-import React from 'react'
-import AttendancePage from '../../components/attendance'
+import React from "react";
+import AttendancePage from "../../components/attendance/QrScanner";
 
 const page = () => {
   return (
     <div>
-      <AttendancePage/>
+      {/* <AttendancePage /> */}
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

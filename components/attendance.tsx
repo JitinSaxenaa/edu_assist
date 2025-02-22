@@ -1,6 +1,7 @@
 import React from "react";
-import Attendance from "@/features/attendance";
 
-const AttendancePage = () => <Attendance />;
+function AttendancePage() {
+  return <></>;
+}
 
 export default AttendancePage;
